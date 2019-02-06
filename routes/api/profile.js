@@ -249,7 +249,9 @@ router.delete(
           .indexOf(req.params.exp_id);
 
         // Splice out of array
-        profile.experience.splice(removeIndex, 1);
+        if (removeIndex > -1) {
+          profile.experience.splice(removeIndex, 1);
+        }
 
         // Save
         profile.save().then(profile => res.json(profile));
@@ -273,7 +275,9 @@ router.delete(
           .indexOf(req.params.edu_id);
 
         // Splice out of array
-        profile.education.splice(removeIndex, 1);
+        if (removeIndex > -1) {
+          profile.education.splice(removeIndex, 1);
+        }
 
         // Save
         profile.save().then(profile => res.json(profile));
