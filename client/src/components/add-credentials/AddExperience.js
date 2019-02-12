@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import TextFieldGroup from "../common/TextFieldGroup";
-// eslint-disable-next-line
 import TextAreaFieldGroup from "../common/TextAreaFieldGroup";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
@@ -130,7 +129,7 @@ class AddExperience extends Component {
                     Current Job
                   </label>
                 </div>
-                <TextFieldGroup
+                <TextAreaFieldGroup
                   placeholder="Job Description"
                   name="description"
                   value={this.state.description}
